@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ChargeZone1" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <!--        <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>-->
+        <item name="colorPrimary">#03AF5F</item>
+        <item name="colorOnPrimary">#FDFDFD</item>
+
+    </style>
+
+    <style name="Theme.ChargeZone1" parent="Base.Theme.ChargeZone1" />
+</resources>

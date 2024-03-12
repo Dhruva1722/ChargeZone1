@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.HomeFragment"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/dashboardTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#03AF5F"
+        android:text="Dashboard"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textAllCaps="true"/>
+
+    <RelativeLayout
+        android:id="@+id/cardLy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_below="@id/dashboardTxt">
+
+        <RelativeLayout
+            android:id="@+id/chargingStationLy"
+            android:layout_width="160dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_card"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="Charging Station"
+                android:textColor="#1B1B1B"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/charging"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/consumerCareLY"
+            android:layout_width="160dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/chargingStationLy"
+            android:background="@drawable/rectangle_card1"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="Consumer Care"
+                android:textColor="#1B1B1B"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/customercare"
+                app:tint="#4CAF50" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/analysisLY"
+            android:layout_width="160dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/consumerCareLY"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_card2"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="Analysis"
+                android:textColor="#1B1B1B"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/analysis"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/settingLY"
+            android:layout_width="160dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/consumerCareLY"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/analysisLY"
+            android:background="@drawable/rectangle_card3"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="Setting"
+                android:textColor="#1B1B1B"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/settings"/>
+
+        </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/barLy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardLy"
+       android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle_card">
+
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/idBarChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

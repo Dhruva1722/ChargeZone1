@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">ChargeZone1</string>
+    <string name="find_ev_charging_station_around_you">Find EV charging \n station around you</string>
+    <string name="make_your_reservation_and_check_in_simple_and_fast">Make your reservation and \n check-in simple and fast</string>
+    <string name="make_quick_safe_payment_with_evspot"><![CDATA[Make quick & safe \n payment with EVSpot]]></string>
+    <string name="nav_open">open\n</string>
+    <string name="nav_close">close</string>
+    <string name="stationNo">No</string>
+
+    <string name="copyright_notice">© Copyright Notice
+        \n\nThis product/design/reports/layouts are entirely under Multispan Control Instruments Pvt. Ltd. copyrights.
+        \n\nDirect/Indirect usage of contents/design/layouts to other integrations is an offense. In case of synchranous/asynchranous parameters/configurations plotting over the field instruments, associated with this interface, any malfunction/misbehavior on the field-realtime is directly under customer scope.
+        \n\nMultispan is not responsible for any disaster caused on the field due to improper inputs from this interface or improper internet connection.
+        \n\nIn this case, Multispan will take action against any misbehavioral act.
+    </string>
+
+    <string name="about_station">
+        This product/design/reports/layouts are entirely under Multispan Control Instruments Pvt. Ltd. copyrights.
+    </string>
+
+    <string name="dayAndTime">
+       Monday 10:00 - 09:00
+        \nMonday 10:00 - 09:00
+        \nTuesday 10:00 - 09:00
+        \nWednesday 10:00 - 09:00
+        \nThursday 10:00 - 09:00
+        \nFriday 10:00 - 09:00
+    </string>
+    <string name="vehicle_txt">
+       Personalize your experience by adding a vehicle
+    </string>
+
+    <string name="vehicle_txt1">
+      Your vehicle is used to determine completable charging station.
+    </string>
+
+    <string name="otp_instruction">
+      Please enter your phone number. You will receive an OTP code in the next step for verification process.
+    </string>
+
+    <string name="otp_code_instruction">
+     We have sent an OTP code to phone number ********88. Enter the OTP code below to continue.
+    </string>
+
+
+</resources>

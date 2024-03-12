@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ProfileFragment">
+
+  <ImageView
+      android:id="@+id/uploadBtn"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:src="@drawable/baseline_camera_alt_24"
+      android:background="@drawable/dashe_line_border"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="30dp"
+      android:padding="5dp"/>
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:hint="Full Name"
+      android:layout_marginTop="10dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
+      android:id="@+id/fullName"
+      android:textColorHint="@color/black"
+      android:textColor="@color/black"
+      android:layout_below="@id/uploadBtn"/>
+
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:hint="Phone Number"
+      android:layout_marginTop="10dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
+      android:textColorHint="@color/black"
+      android:id="@+id/phoneNumber"
+      android:textColor="@color/black"
+      android:layout_below="@id/fullName"/>
+
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:hint="Email"
+      android:layout_marginTop="10dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="10dp"
+      android:textColor="@color/black"
+      android:id="@+id/emailEdt"
+      android:textColorHint="@color/black"
+      android:layout_below="@id/phoneNumber"/>
+
+  <EditText
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:hint="DOB"
+      android:textColorHint="@color/black"
+      android:textColor="@color/black"
+      android:layout_marginTop="10dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="10dp"
+      android:id="@+id/DOB"
+      android:layout_below="@id/emailEdt"/>
+
+  <EditText
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:hint="Gender"
+      android:layout_marginTop="10dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginEnd="20dp"
+      android:id="@+id/genderEdt"
+      android:textColorHint="@color/black"
+      android:textColor="@color/black"
+      android:layout_below="@id/emailEdt"
+      android:layout_toRightOf="@id/DOB"/>
+
+
+  <Switch
+      android:id="@+id/simpleSwitch"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/genderEdt"
+      android:text="Bussiness Profile"
+      android:gravity="left"
+      android:textStyle="bold"
+      android:textColor="@color/black"
+      android:textSize="18sp"
+      android:layout_marginTop="20dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"/>
+
+  <TextView
+      android:id="@+id/gstTxt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="GST Number"
+      android:textSize="12sp"
+      android:textColor="@color/black"
+      android:layout_marginTop="20dp"
+      android:layout_marginLeft="20dp"
+      android:layout_below="@id/simpleSwitch"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:hint="GST Number"
+      android:textColorHint="@color/black"
+      android:layout_marginTop="5dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:layout_below="@id/gstTxt"
+      android:id="@+id/gstNumber">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/black" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <Button
+      android:id="@+id/profileUpdateBtn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Update Profile"
+      android:layout_above="@id/profileDeleteBtn"
+      android:layout_marginRight="20dp"
+      android:layout_marginLeft="20dp" />
+
+  <Button
+      android:id="@+id/profileDeleteBtn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Delete Account"
+      android:backgroundTint="#D13706"
+      android:layout_alignParentBottom="true"
+      android:layout_marginRight="20dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginBottom="10dp"/>
+  
+</RelativeLayout>

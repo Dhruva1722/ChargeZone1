@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity.SplashScreen"
+    android:background="@color/white"
+    android:elevation="10dp">
+
+
+    <ImageView
+        android:id="@+id/splashImg1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/greenenergy"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/textSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ChargeZone"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="#03AF5F"
+        android:layout_below="@id/splashImg1"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textSplash1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" \u00AE Powered by Multispan India"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#03AF5F"
+        android:layout_below="@id/textSplash"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/splashImg2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/time"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

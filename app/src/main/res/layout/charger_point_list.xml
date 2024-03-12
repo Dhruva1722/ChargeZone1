@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <RadioButton
+                android:id="@+id/pointA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/aPointTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/baseline_local_gas_station_24"
+                android:layout_toRightOf="@id/pointA"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DC-Moderate- 15kW- GB/T"
+                android:textSize="18sp"
+                android:layout_below="@id/aPointTxt"
+                android:layout_toRightOf="@id/pointA"/>
+
+            <Button
+                android:id="@+id/availableBtn"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Available"
+                android:textSize="12sp"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$2/unit"
+                android:textSize="12sp"
+                android:layout_below="@id/availableBtn"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <RadioButton
+                android:id="@+id/pointB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/bPointTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/baseline_local_gas_station_24"
+                android:layout_toRightOf="@id/pointB"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DC-Fast- 30kW- css II"
+                android:textSize="18sp"
+                android:layout_below="@id/bPointTxt"
+                android:layout_toRightOf="@id/pointB"/>
+
+            <Button
+                android:id="@+id/availableBtn1"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Unavailable"
+                android:textSize="12sp"
+                android:backgroundTint="@color/yellow"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$2/unit"
+                android:textSize="12sp"
+                android:layout_below="@id/availableBtn1"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <RadioButton
+                android:id="@+id/pointC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/cPointTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/baseline_local_gas_station_24"
+                android:layout_toRightOf="@id/pointC"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DC-Slow- 3.3kW- GB/T"
+                android:textSize="18sp"
+                android:layout_below="@id/cPointTxt"
+                android:layout_toRightOf="@id/pointC"/>
+
+            <Button
+                android:id="@+id/availableBtn2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Unavailable"
+                android:textSize="12sp"
+                android:backgroundTint="@color/yellow"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$2/unit"
+                android:textSize="12sp"
+                android:layout_below="@id/availableBtn2"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <RadioButton
+                android:id="@+id/pointD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/dPointTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/baseline_local_gas_station_24"
+                android:layout_toRightOf="@id/pointD"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DC-Fast- 30kW- GB/T"
+                android:textSize="18sp"
+                android:layout_below="@id/dPointTxt"
+                android:layout_toRightOf="@id/pointD"/>
+
+            <Button
+                android:id="@+id/availableBtn3"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Unavailable"
+                android:textSize="12sp"
+                android:backgroundTint="@color/yellow"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$2/unit"
+                android:textSize="12sp"
+                android:layout_below="@id/availableBtn3"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.BookingFragment">
+
+    <TextView
+        android:id="@+id/myBookingTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="My Booking"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/btnLy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:layout_below="@id/myBookingTxt"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#D7D6D6"
+        android:background="@drawable/rectangle_card">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmed"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#4CAF50"
+            android:background="@drawable/rectangle_card"
+            android:padding="8dp"
+            android:backgroundTint="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelled"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLy"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:background="@drawable/stroke_bg">
+
+        <TextView
+            android:id="@+id/connectionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Highway EV Connectors"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#4CAF50"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 09-02-2024"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16:15 pm"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/date"
+            android:textSize="14sp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/connectionAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address with distance"
+            android:layout_below="@id/connectionName"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/timetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time Spent : 22min"
+            android:layout_below="@id/connectionAddress"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/chargestxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Charges : \u20B9120.00"
+            android:layout_below="@id/timetxt"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#000000"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

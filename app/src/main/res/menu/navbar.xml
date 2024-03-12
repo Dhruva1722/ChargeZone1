@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:id="@+id/nav_charge_history"
+        android:title="Charging History"
+        android:icon="@drawable/baseline_local_gas_station_24"/>
+
+    <item
+        android:id="@+id/nav_vehicles"
+        android:title="My Vehicles"
+        android:icon="@drawable/baseline_drive_eta_24"/>
+
+    <item
+        android:id="@+id/nav_acc"
+        android:title="My Account"
+        android:icon="@drawable/baseline_person_24"/>
+
+    <item
+        android:id="@+id/nav_my_wallet"
+        android:title="My Wallet"
+        android:icon="@drawable/baseline_wallet_24"/>
+
+    <item
+        android:id="@+id/nav_booking"
+        android:title="My Booking"
+        android:icon="@drawable/baseline_check_box_24"/>
+
+    <item
+        android:id="@+id/nav_contact_us"
+        android:title="Contact Us"
+        android:icon="@drawable/baseline_check_box_24"/>
+
+    <item
+        android:id="@+id/nav_termscondition"
+        android:title="Terms and Conditions"
+        android:icon="@drawable/baseline_error_outline_24"/>
+
+</menu>

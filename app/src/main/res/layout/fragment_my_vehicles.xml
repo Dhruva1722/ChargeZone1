@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.MyVehiclesFragment">
+
+
+    <TextView
+        android:id="@+id/vehicle_heading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vehicle_txt"
+        android:textStyle="bold"
+        android:textSize="17sp"
+       android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/vehicle_heading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vehicle_txt1"
+       android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:layout_below="@id/vehicle_heading1"/>
+
+    <TextView
+        android:id="@+id/border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CDCDCD"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/vehicle_heading2" />
+
+    <TextView
+        android:id="@+id/all_vehiclesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My All Vehicle"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/border"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/all_vehiclesTxt"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/border">
+
+    <ImageView
+        android:id="@+id/carImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/car"
+        android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/carName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baleno EV6"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/carImage"/>
+
+        <TextView
+            android:id="@+id/carYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year  2023"
+            android:textSize="12sp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/carName"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/carImage"/>
+
+        <TextView
+            android:id="@+id/carNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIN No. GJ 01 AB 1111"
+            android:textSize="12sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/carYear"
+            android:layout_toRightOf="@id/carImage" />
+
+        <TextView
+            android:id="@+id/carPort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Port - CCS-II"
+            android:textSize="12sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/carNo"
+            android:layout_toRightOf="@id/carImage" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dashe_line_border"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/plus"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New EV"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/plus"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

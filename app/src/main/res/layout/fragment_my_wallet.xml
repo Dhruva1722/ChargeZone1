@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.MyWalletFragment">
+
+<TextView
+    android:id="@+id/myWalletTxt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:text="My Wallet"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/balanceLy"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/myWalletTxt"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/border"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Balance"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#4CAF50"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\u20B9500.00"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/transactionTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transaction History"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/balanceLy"/>
+    
+    
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/folder"
+        android:layout_below="@id/noTransactionTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+       />
+
+
+    <TextView
+        android:id="@+id/noTransactionTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Transaction to Show Here"
+        android:textSize="18sp"
+        android:textColor="#A8A8A8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/transactionTxt"/>
+
+</RelativeLayout>
