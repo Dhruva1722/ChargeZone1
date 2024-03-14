@@ -5,7 +5,7 @@
     android:layout_margin="7dp">
 
     <TextView
-        android:id="@+id/stationName"
+        android:id="@+id/stationAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Station Name"
@@ -18,20 +18,17 @@
         android:layout_height="wrap_content"
         android:text="Kwh Value"
         android:textSize="18sp"
-        android:layout_toRightOf="@id/stationName"
+        android:layout_toRightOf="@id/stationAddress"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/check_box"
+        android:id="@+id/editBtn"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="12dp"
-        android:visibility="gone"
         android:layout_alignParentRight="true"
-        android:src="@drawable/baseline_check_box_24" />
-
-
+        android:src="@drawable/baseline_edit_24" />
 
 </RelativeLayout>

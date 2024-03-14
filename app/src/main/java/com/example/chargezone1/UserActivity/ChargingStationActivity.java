@@ -40,7 +40,7 @@ import java.util.List;
 
 public class ChargingStationActivity extends AppCompatActivity {
 
-    ImageView backBtn, addStationBtn ,deleteBtn;
+    ImageView backBtn, addStationBtn ,deleteBtn , editBtn;
     EditText editTextStationName, editTextStationUnits, editTextStationAddress, editTextStationEmail, editTextStationPhoneNo;
     TextView tvEmpty;
     StationDataAdapter adapter;
@@ -57,7 +57,7 @@ public class ChargingStationActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.stateDataList);
         List<StationData> stationDataList = readDataFromFile();
-        adapter = new StationDataAdapter(stationDataList, this);
+        adapter = new StationDataAdapter(stationDataList,this,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         backBtn = findViewById(R.id.backArrow);
@@ -89,6 +89,7 @@ public class ChargingStationActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     private void deleteSelectedItems(ArrayList<StationData> selectedItems) {
@@ -203,7 +204,6 @@ public class ChargingStationActivity extends AppCompatActivity {
             }
         });
     }
-
 
 }
 

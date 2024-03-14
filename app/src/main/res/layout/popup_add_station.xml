@@ -7,6 +7,7 @@
     android:layout_margin="10dp">
 
     <TextView
+        android:id="@+id/addTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Stations"
@@ -21,7 +22,8 @@
         android:hint="Station Name"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"

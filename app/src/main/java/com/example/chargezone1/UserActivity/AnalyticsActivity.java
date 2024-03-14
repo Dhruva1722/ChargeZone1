@@ -80,7 +80,7 @@ public class AnalyticsActivity extends AppCompatActivity {
 //        List<StationData> stationDataList = readDataFromFile();
 
         stationDataList = readDataFromFile();
-        adapter = new StationDataAdapter(stationDataList, this); // Pass the activity reference
+        adapter = new StationDataAdapter(stationDataList, this,this); // Pass the activity reference
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

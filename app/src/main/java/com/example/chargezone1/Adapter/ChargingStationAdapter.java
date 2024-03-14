@@ -78,7 +78,7 @@
 
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
-                stationName = itemView.findViewById(R.id.stationName);
+                stationName = itemView.findViewById(R.id.stationAddress);
                 kwhValue = itemView.findViewById(R.id.stationKwh);
 
                 itemView.setOnClickListener(this);
