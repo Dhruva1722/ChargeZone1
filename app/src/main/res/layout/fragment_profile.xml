@@ -6,7 +6,7 @@
     tools:context=".Fragment.ProfileFragment">
 
   <ImageView
-      android:id="@+id/uploadBtn"
+      android:id="@+id/imageBtn"
       android:layout_width="100dp"
       android:layout_height="100dp"
       android:src="@drawable/baseline_camera_alt_24"
@@ -25,7 +25,7 @@
       android:id="@+id/fullName"
       android:textColorHint="@color/black"
       android:textColor="@color/black"
-      android:layout_below="@id/uploadBtn"/>
+      android:layout_below="@id/imageBtn"/>
 
 
   <EditText

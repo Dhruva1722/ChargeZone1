@@ -9,11 +9,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.chargezone1.Fragment.BookingFragment;
 import com.example.chargezone1.Fragment.ChargersFragment;
@@ -23,16 +25,24 @@ import com.example.chargezone1.Fragment.MyVehiclesFragment;
 import com.example.chargezone1.Fragment.MyWalletFragment;
 import com.example.chargezone1.Fragment.ProfileFragment;
 import com.example.chargezone1.UserActivity.ChargingStationActivity;
+import com.example.chargezone1.UserActivity.LoginActivity;
 import com.example.chargezone1.UserActivity.TermsAndCondition;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     public DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
+    FirebaseAuth mAuth;
+    TextView logoutBtn ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FirebaseApp.initializeApp(this);
+        mAuth = FirebaseAuth.getInstance();
 
         ImageView toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
@@ -101,8 +111,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        logoutBtn = findViewById(R.id.logout);
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Call the logout method
+                logout();
+            }
+        });
+
     }
 
+    private void logout() {
+        // Sign out the user from Firebase Authentication
+        mAuth.signOut();
+
+        // Clear the authentication state from SharedPreferences
+        SharedPreferences preferences = getSharedPreferences("user_auth", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("isLoggedIn", false);
+        editor.apply();
+
+        // Redirect the user to the LoginActivity
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish(); // Finish the MainActivity to prevent going back to it when pressing back button
+    }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {

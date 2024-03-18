@@ -10,43 +10,18 @@
     <RelativeLayout
         android:id="@+id/toolBarLy"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#4CAF50"
-        android:elevation="10dp">
+        android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/backArrow"
+            android:id="@+id/deleteBtn"
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
+            android:src="@drawable/baseline_delete_24"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/leftarrow"
-            app:tint="@color/white" />
+            android:layout_marginRight="10dp"/>
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:layout_toRightOf="@id/backArrow"
-            android:text="Charging Station "
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/deleteBtn"
-                    android:layout_width="30dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/baseline_delete_24"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"/>
+        <include layout="@layout/toolbar_layout" />
 
     </RelativeLayout>
 

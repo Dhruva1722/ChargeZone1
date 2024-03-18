@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ChargeZone1</string>
-    <string name="find_ev_charging_station_around_you">Find EV charging \n station around you</string>
+    <string name="find_ev_charging_station_around_you">Find EV Charging \n Station around you</string>
     <string name="make_your_reservation_and_check_in_simple_and_fast">Make your reservation and \n check-in simple and fast</string>
     <string name="make_quick_safe_payment_with_evspot"><![CDATA[Make quick & safe \n payment with EVSpot]]></string>
     <string name="nav_open">open\n</string>

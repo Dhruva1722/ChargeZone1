@@ -7,39 +7,7 @@
     android:background="@color/white"
     tools:context=".UserActivity.FirstStationActivity">
 
-    <RelativeLayout
-        android:id="@+id/toolBarLy"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#4CAF50"
-        android:elevation="10dp">
-
-        <ImageView
-            android:id="@+id/backArrow"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/leftarrow"
-            app:tint="@color/white" />
-
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:layout_toRightOf="@id/backArrow"
-            android:text="Charging Station "
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </RelativeLayout>
+    <include layout="@layout/toolbar_layout" />
 
     <TextView
         android:id="@+id/placeName"

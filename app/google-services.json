@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "119064699575",
+    "project_id": "chargezone1-3fc7d",
+    "storage_bucket": "chargezone1-3fc7d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119064699575:android:3d8fe89bb70a06f6656332",
+        "android_client_info": {
+          "package_name": "com.example.chargezone1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrotDOm126yttK2h6MO0qqPRz0vl6m9Yk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

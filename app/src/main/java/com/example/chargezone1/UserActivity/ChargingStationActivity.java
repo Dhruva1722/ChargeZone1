@@ -60,6 +60,10 @@ public class ChargingStationActivity extends AppCompatActivity {
         adapter = new StationDataAdapter(stationDataList,this,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        TextView  titleTextView= findViewById(R.id.text);
+        titleTextView.setText("Charging Station");
+
         backBtn = findViewById(R.id.backArrow);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +93,6 @@ public class ChargingStationActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     private void deleteSelectedItems(ArrayList<StationData> selectedItems) {

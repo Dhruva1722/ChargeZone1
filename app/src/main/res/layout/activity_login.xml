@@ -16,34 +16,42 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/peacelily" />
 
-    <LinearLayout
+<!--    <LinearLayout-->
+<!--        android:id="@+id/googleBtn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/loginImg"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:background="@drawable/rectanglecard">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:src="@drawable/google"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Login via Google"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="#03AF5F"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_gravity="center_vertical"/>-->
+
+<!--    </LinearLayout>-->
+
+    <com.google.android.gms.common.SignInButton
         android:id="@+id/googleBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/loginImg"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/rectanglecard">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/google"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login via Google"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#03AF5F"
-            android:layout_margin="10dp"
-            android:layout_gravity="center_vertical"/>
-
-    </LinearLayout>
+        android:layout_below="@id/loginImg"/>
 
     <LinearLayout
         android:id="@+id/appleBtn"
@@ -63,7 +71,6 @@
             android:src="@drawable/apple"/>
 
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login via Apple"

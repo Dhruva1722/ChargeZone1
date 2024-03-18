@@ -75,6 +75,8 @@ public class AnalyticsActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_analytics);
 
+        TextView  titleTextView= findViewById(R.id.text);
+        titleTextView.setText("Analytics");
 
         recyclerView = findViewById(R.id.analysis_list);
 //        List<StationData> stationDataList = readDataFromFile();

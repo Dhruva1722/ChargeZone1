@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.chargezone1.MainActivity;
@@ -27,6 +28,9 @@ public class SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
+
+        TextView titleTextView= findViewById(R.id.text);
+        titleTextView.setText("Settings");
 
         settingsListView = findViewById(R.id.settingsListView);
 

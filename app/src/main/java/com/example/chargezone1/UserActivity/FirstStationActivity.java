@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.chargezone1.Adapter.TabLayoutAdapter;
 import com.example.chargezone1.Fragment.AboutStationFragment;
@@ -26,6 +27,9 @@ public class FirstStationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_station);
+
+        TextView titleTextView= findViewById(R.id.text);
+        titleTextView.setText("Station");
 
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);

@@ -112,7 +112,6 @@ public class StationDataAdapter extends RecyclerView.Adapter<StationDataAdapter.
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("Edit Station Data");
 
-
         // Inflate the layout for adding/editing data
         View view = LayoutInflater.from(context).inflate(R.layout.popup_add_station, null);
         final EditText stationAddressEditText = view.findViewById(R.id.editTextStationAddress);
@@ -167,9 +166,9 @@ public class StationDataAdapter extends RecyclerView.Adapter<StationDataAdapter.
     private ActionMode.Callback actionModeCallback = new ActionMode.Callback() {
         @Override
         public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-//            isActionModeActive = true;
-//            MenuInflater inflater = mode.getMenuInflater();
-//            inflater.inflate(R.menu.delete_menu, menu);
+            isActionModeActive = true;
+            MenuInflater inflater = mode.getMenuInflater();
+            inflater.inflate(R.menu.delete_menu, menu);
             return true;
         }
 
@@ -181,12 +180,12 @@ public class StationDataAdapter extends RecyclerView.Adapter<StationDataAdapter.
         @Override
         public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
 
-//            int id=item.getItemId();
-//            if (id == R.id.menu_delete) {
-//                // Delete selected items
-//                deleteSelectedItems();
-//                mode.finish();
-//                }
+            int id=item.getItemId();
+            if (id == R.id.menu_delete) {
+                // Delete selected items
+                deleteSelectedItems();
+                mode.finish();
+                }
                 return true;
         }
 
@@ -255,6 +254,5 @@ public class StationDataAdapter extends RecyclerView.Adapter<StationDataAdapter.
         // Highlight the item at the specified position
         notifyItemChanged(position);
     }
-
 
 }
