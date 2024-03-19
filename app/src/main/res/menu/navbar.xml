@@ -36,6 +36,11 @@
         android:icon="@drawable/baseline_contact_support_24"/>
 
     <item
+        android:id="@+id/nav_operator"
+        android:title="Station Operators"
+        android:icon="@drawable/baseline_person_search_24"/>
+
+    <item
         android:id="@+id/nav_termscondition"
         android:title="Terms and Conditions"
         android:icon="@drawable/baseline_error_outline_24"/>

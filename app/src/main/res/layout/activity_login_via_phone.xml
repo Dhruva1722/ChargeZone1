@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".UserActivity.LoginViaPhone">
 
-
     <ImageView
         android:id="@+id/backArrow"
         android:layout_width="30dp"
@@ -15,7 +14,6 @@
         android:layout_marginStart="10dp"
         android:src="@drawable/leftarrow"
         app:tint="#4CAF50" />
-
 
     <TextView
         android:id="@+id/helloTxt"

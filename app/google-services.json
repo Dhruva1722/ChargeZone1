@@ -7,12 +7,25 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:119064699575:android:3d8fe89bb70a06f6656332",
+        "mobilesdk_app_id": "1:119064699575:android:357a77f629f53af2656332",
         "android_client_info": {
           "package_name": "com.example.chargezone1"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "119064699575-n75m4uggpjdm9qq83v29hjod5r917rtn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chargezone1",
+            "certificate_hash": "e24afde0939bf60f673dddcd4c5c0e5c8d91efb6"
+          }
+        },
+        {
+          "client_id": "119064699575-egct9rk4p3o64ubs49gh8se70c3k0589.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBrotDOm126yttK2h6MO0qqPRz0vl6m9Yk"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119064699575-egct9rk4p3o64ubs49gh8se70c3k0589.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

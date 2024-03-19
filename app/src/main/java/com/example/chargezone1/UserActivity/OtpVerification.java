@@ -48,18 +48,18 @@ public class OtpVerification extends AppCompatActivity {
         verifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OtpVerification.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(OtpVerification.this, MainActivity.class);
+//                startActivity(intent);
                 // Retrieve the OTP entered by the user
-//                String otp = ((PinView) findViewById(R.id.pinview)).getText().toString();
-//                if (!otp.isEmpty()) {
-//                    // Create a PhoneAuthCredential object with the code entered by the user and the verification ID
-//                    PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, otp);
-//                    // Sign in with the credential
-//                    signInWithPhoneAuthCredential(credential);
-//                } else {
-//                    Toast.makeText(OtpVerification.this, "Please enter OTP", Toast.LENGTH_SHORT).show();
-//                }
+                String otp = ((PinView) findViewById(R.id.pinview)).getText().toString();
+                if (!otp.isEmpty()) {
+                    // Create a PhoneAuthCredential object with the code entered by the user and the verification ID
+                    PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, otp);
+                    // Sign in with the credential
+                    signInWithPhoneAuthCredential(credential);
+                } else {
+                    Toast.makeText(OtpVerification.this, "Please enter OTP", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

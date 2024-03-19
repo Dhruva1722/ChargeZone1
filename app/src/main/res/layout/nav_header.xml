@@ -8,30 +8,31 @@
     android:elevation="6dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileView"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/profile"
+        android:src="@drawable/profileimg"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         app:tint="@color/black" />
 
     <TextView
+        android:id="@+id/guestName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guestname"
+        android:text="Welcome Dhruva,"
         android:textColor="#121212"
+        android:textStyle="bold"
         android:layout_marginLeft="20dp"
-        android:textSize="12sp"/>
+        android:textSize="20sp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome Guest,"
-        android:textStyle="bold"
+        android:text="Nardoa,Ahmedabad"
         android:textColor="#121212"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
-        android:textSize="20sp"/>
-
+        android:textSize="15sp"/>
 
 </LinearLayout>

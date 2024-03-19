@@ -3,6 +3,7 @@ package com.example.chargezone1.UserActivity;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,7 +33,8 @@ public class LoginActivity extends AppCompatActivity {
 
     LinearLayout  appleBtn , phoneNumberBtn;
 
-    SignInButton googleBtn;
+//    SignInButton googleBtn;
+    LinearLayout googleBtn;
     GoogleSignInClient googleSignInClient;
     FirebaseAuth firebaseAuth;
     @Override
@@ -51,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         phoneNumberBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,8 +62,16 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+//        googleBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("119064699575-uigc8135eb93dav0pi6ar7ijkn6alqki.apps.googleusercontent.com")
+                .requestIdToken("119064699575-egct9rk4p3o64ubs49gh8se70c3k0589.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
 

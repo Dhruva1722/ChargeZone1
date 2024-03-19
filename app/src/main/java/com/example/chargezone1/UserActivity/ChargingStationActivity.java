@@ -13,27 +13,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.chargezone1.Adapter.ChargingStationAdapter;
 import com.example.chargezone1.Adapter.StationDataAdapter;
 import com.example.chargezone1.MainActivity;
-import com.example.chargezone1.Model.ChargingStation;
 import com.example.chargezone1.Model.MainViewModel;
 import com.example.chargezone1.Model.StationData;
 import com.example.chargezone1.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,11 +44,12 @@ public class ChargingStationActivity extends AppCompatActivity {
 
     MainViewModel mainViewModel;
     List<StationData> stationDataList;
-
+    FirebaseDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_charging_station);
+
 
         tvEmpty=findViewById(R.id.tv_empty);
 
@@ -176,9 +174,14 @@ public class ChargingStationActivity extends AppCompatActivity {
                 String stationPhoneNo = editTextStationPhoneNo.getText().toString();
                 String stationEmail = editTextStationEmail.getText().toString();
 
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference stationsRef = database.getReference("stations");
+
                 // Create a data model object
                 StationData stationData = new StationData(stationName, stationUnits, stationAddress, stationPhoneNo, stationEmail);
-
+                String key = stationsRef.push().getKey();
+                stationsRef.child(key).setValue(stationData);
                 // Read existing data from file
                 List<StationData> existingDataList = readDataFromFile();
 

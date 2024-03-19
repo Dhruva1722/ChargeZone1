@@ -213,6 +213,10 @@ public class StationDataAdapter extends RecyclerView.Adapter<StationDataAdapter.
         // Notify the user about successful deletion
         Toast.makeText(activity, "Selected items deleted", Toast.LENGTH_SHORT).show();
     }
+
+    public void notifyDataChanged() {
+        notifyDataSetChanged();
+    }
     @Override
     public int getItemCount() {
         return stationDataList != null ? stationDataList.size() : 0; // Check if the list is null before accessing its size

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.OperatorsFragment"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/operatorTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Station Operators Incharge"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/operatorTxt"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rectanglecard"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/operatorImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/operatorimg"/>
+
+    <TextView
+        android:id="@+id/operatorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bhavesh Patel"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/operatorImg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/operatorStationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tata Sky"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/operatorImg"
+            android:layout_below="@id/operatorName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"/>
+
+
+        <TextView
+        android:id="@+id/stationOperatorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vapi,Gujarat"
+        android:textSize="12sp"
+        android:layout_toRightOf="@id/operatorImg"
+        android:layout_below="@id/operatorStationName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/operatorNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9898700851"
+        android:textSize="15sp"
+        android:autoLink="phone"
+        android:layout_toRightOf="@id/operatorImg"
+        android:layout_below="@id/stationOperatorName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

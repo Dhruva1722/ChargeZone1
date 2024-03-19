@@ -10,6 +10,16 @@ public class StationData {
 
     private int stationValue;
 
+    private String key;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
     public StationData(String stationName, String stationUnits, String stationAddress, String stationPhoneNo, String stationEmail) {
         this.stationName = stationName;
         this.stationUnits = stationUnits;

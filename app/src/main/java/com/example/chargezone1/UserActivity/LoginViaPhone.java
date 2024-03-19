@@ -73,72 +73,72 @@ public class LoginViaPhone extends AppCompatActivity {
         sendOtpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginViaPhone.this, OtpVerification.class);
-                startActivity(intent);
-//                String phoneNumber = edtPhone.getText().toString().trim();
-//                if (!phoneNumber.isEmpty()) {
-//                    PhoneAuthProvider.getInstance().verifyPhoneNumber(
-//                            "+91" + phoneNumber, // Phone number to verify
-//                            60, // Timeout duration
-//                            TimeUnit.SECONDS, // Unit of timeout
-//                            LoginViaPhone.this, // Activity (for callback binding)
-//                            mCallbacks); // OnVerificationStateChangedCallbacks
-//                } else {
-//                    Toast.makeText(LoginViaPhone.this, "Please enter a phone number", Toast.LENGTH_SHORT).show();
-//                }
+//                Intent intent = new Intent(LoginViaPhone.this, OtpVerification.class);
+//                startActivity(intent);
+                String phoneNumber = edtPhone.getText().toString().trim();
+                if (!phoneNumber.isEmpty()) {
+                    PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                            "+91" + phoneNumber, // Phone number to verify
+                            60, // Timeout duration
+                            TimeUnit.SECONDS, // Unit of timeout
+                            LoginViaPhone.this, // Activity (for callback binding)
+                            mCallbacks); // OnVerificationStateChangedCallbacks
+                } else {
+                    Toast.makeText(LoginViaPhone.this, "Please enter a phone number", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
-//        mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-//            @Override
-//            public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-//                // This method will be called in two situations:
-//                // 1 - Instant verification. In some cases, the phone number can be instantly
-//                //     verified without needing to send or enter a verification code.
-//                // 2 - Auto-retrieval. On some devices, Google Play services can automatically
-//                //     detect the incoming verification SMS and perform verification without user action.
-//                signInWithPhoneAuthCredential(phoneAuthCredential);
-//            }
-//
-//            @Override
-//            public void onVerificationFailed(FirebaseException e) {
-//                // This method is called if an invalid request for verification is made,
-//                // for instance if the the phone number format is not valid.
-//                Toast.makeText(LoginViaPhone.this, "Verification failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//
-//            @Override
-//            public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-//
-//                SharedPreferences preferences = getSharedPreferences("user_auth", MODE_PRIVATE);
-//                SharedPreferences.Editor editor = preferences.edit();
-//                editor.putBoolean("isLoggedIn", true);
-//                editor.apply();
-//                // The SMS verification code has been sent to the provided phone number,
-//                // we now need to ask the user to enter the code and then construct a credential
-//                // by combining the code with a verification ID.
-//                // Save the verification ID and resending token so we can use them later
-//                // Start the OTP verification activity
-//                Intent intent = new Intent(LoginViaPhone.this, OtpVerification.class);
-//                intent.putExtra("verificationId", s);
-//                startActivity(intent);
-//            }
-//        };
-//    }
-//    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
-//        mAuth.signInWithCredential(credential)
-//                .addOnCompleteListener(this, new OnCompleteListener() {
-//                    @Override
-//                    public void onComplete(@NonNull Task task) {
-//                        if (task.isSuccessful()) {
-//                            // Sign in success, update UI with the signed-in user's information
-//                            Toast.makeText(LoginViaPhone.this, "Authentication successful.", Toast.LENGTH_SHORT).show();
-//                            // Here you can navigate to the next activity or perform any other operation
-//                        } else {
-//                            // Sign in failed, display a message and update the UI
-//                            Toast.makeText(LoginViaPhone.this, "Authentication failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
+        mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+            @Override
+            public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
+                // This method will be called in two situations:
+                // 1 - Instant verification. In some cases, the phone number can be instantly
+                //     verified without needing to send or enter a verification code.
+                // 2 - Auto-retrieval. On some devices, Google Play services can automatically
+                //     detect the incoming verification SMS and perform verification without user action.
+                signInWithPhoneAuthCredential(phoneAuthCredential);
+            }
+
+            @Override
+            public void onVerificationFailed(FirebaseException e) {
+                // This method is called if an invalid request for verification is made,
+                // for instance if the the phone number format is not valid.
+                Toast.makeText(LoginViaPhone.this, "Verification failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+
+                SharedPreferences preferences = getSharedPreferences("user_auth", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putBoolean("isLoggedIn", true);
+                editor.apply();
+                // The SMS verification code has been sent to the provided phone number,
+                // we now need to ask the user to enter the code and then construct a credential
+                // by combining the code with a verification ID.
+                // Save the verification ID and resending token so we can use them later
+                // Start the OTP verification activity
+                Intent intent = new Intent(LoginViaPhone.this, OtpVerification.class);
+                intent.putExtra("verificationId", s);
+                startActivity(intent);
+            }
+        };
+    }
+    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull Task task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Toast.makeText(LoginViaPhone.this, "Authentication successful.", Toast.LENGTH_SHORT).show();
+                            // Here you can navigate to the next activity or perform any other operation
+                        } else {
+                            // Sign in failed, display a message and update the UI
+                            Toast.makeText(LoginViaPhone.this, "Authentication failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
    }
 }

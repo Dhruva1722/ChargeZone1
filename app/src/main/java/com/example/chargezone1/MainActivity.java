@@ -17,12 +17,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.chargezone1.Fragment.BookingFragment;
 import com.example.chargezone1.Fragment.ChargersFragment;
 import com.example.chargezone1.Fragment.Contact_UsFragment;
 import com.example.chargezone1.Fragment.HomeFragment;
 import com.example.chargezone1.Fragment.MyVehiclesFragment;
 import com.example.chargezone1.Fragment.MyWalletFragment;
+import com.example.chargezone1.Fragment.OperatorsFragment;
 import com.example.chargezone1.Fragment.ProfileFragment;
 import com.example.chargezone1.UserActivity.ChargingStationActivity;
 import com.example.chargezone1.UserActivity.LoginActivity;
@@ -30,12 +32,17 @@ import com.example.chargezone1.UserActivity.TermsAndCondition;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
     public DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
     FirebaseAuth mAuth;
-    TextView logoutBtn ;
+    TextView logoutBtn , guestName ;
+    CircleImageView profileImg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +53,23 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
+        guestName = findViewById(R.id.guestName);
+        profileImg = findViewById(R.id.profileView);
+
+
+        // Initialize firebase user
+        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+
+        if (firebaseUser != null) {
+            // When firebase user is not equal to null set image on image view
+            if (firebaseUser.getPhotoUrl() != null) {
+//                Glide.with(MainActivity.this).load(firebaseUser.getPhotoUrl()).into(profileImg);
+            }
+            // set name on text view
+            if (firebaseUser.getDisplayName() != null) {
+                guestName.setText(firebaseUser.getDisplayName());
+            }
+        }
 
         drawerLayout = findViewById(R.id.drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
@@ -98,6 +122,9 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
                 }else if (item.getItemId() == R.id.nav_contact_us) {
                     fragment = new Contact_UsFragment();
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }else if (item.getItemId() == R.id.nav_operator) {
+                    fragment = new OperatorsFragment();
                     drawerLayout.closeDrawer(GravityCompat.START);
                 } else if (item.getItemId() == R.id.nav_termscondition) {
                     Intent intent = new Intent(MainActivity.this, TermsAndCondition.class);

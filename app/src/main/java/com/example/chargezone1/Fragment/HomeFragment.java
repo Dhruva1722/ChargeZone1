@@ -38,12 +38,9 @@ import java.util.List;
 public class HomeFragment extends Fragment {
 
     BarChart barChart;
-    BarData barData;
-    BarDataSet barDataSet;
 
     RelativeLayout chargingActivity , analyticsActivity, consumerActivity, settingActivity;
 
-    ArrayList barEntriesArrayList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -84,16 +81,27 @@ public class HomeFragment extends Fragment {
 
         List<BarEntry> entries = new ArrayList<>();
         entries.add(new BarEntry(0f, 100));
-        entries.add(new BarEntry(1f, 50));
+        entries.add(new BarEntry(1f, 500));
         entries.add(new BarEntry(2f, 150));
         entries.add(new BarEntry(3f, 80));
         entries.add(new BarEntry(4f, 180));
+        entries.add(new BarEntry(5f, 280));
+        entries.add(new BarEntry(6f, 100));
+        entries.add(new BarEntry(7f, 350));
+        entries.add(new BarEntry(8f, 750));
+        entries.add(new BarEntry(9f, 400));
+        entries.add(new BarEntry(10f, 589));
+        entries.add(new BarEntry(11f, 260));
+        entries.add(new BarEntry(12f, 455));
+        entries.add(new BarEntry(13f, 341));
+        entries.add(new BarEntry(14f, 600));
+
 
         // Labels for the X-axis (states)
-        final String[] labels = new String[]{"Surat", "Rajkot", "Delhi", "Ahmedabad", "Vadodara"};
+        final String[] labels = new String[]{"Surat", "Rajkot", "Delhi", "Ahmedabad", "Vadodara","Patan","Jamnagar","Porbandar","Morbi","Junagadh","Bhavnagar","Navsari","Palanpur","Nadiad","Valsad","Veraval"};
 
         BarDataSet dataSet = new BarDataSet(entries, "Charging Stations");
-        dataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+        dataSet.getColor(R.color.yellow);
 
         BarData barData = new BarData(dataSet);
         barChart.setData(barData);
@@ -102,6 +110,14 @@ public class HomeFragment extends Fragment {
         xAxis.setValueFormatter(new IndexAxisValueFormatter(labels));
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setGranularity(1f);
+        xAxis.setLabelCount(labels.length); // Set the label count to the number of labels in your dataset
+        xAxis.setAvoidFirstLastClipping(true); // Ensure that the first and last labels are not clipped
+        xAxis.setDrawGridLines(false);
+        xAxis.setDrawAxisLine(true); // Optionally, enable drawing the axis line
+
+// Rotate labels if needed
+        xAxis.setLabelRotationAngle(90f); // Rotate labels by 45 degrees for better readability
+
 
         barChart.getAxisLeft().setEnabled(true);
         barChart.getAxisRight().setEnabled(false);
